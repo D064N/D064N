@@ -1,8 +1,0 @@
-RewriteEngine on
-RewriteRule ^admin/(.*)$ /admin [R=301,NC,L]
-RewriteRule ^admin admin.php [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ objection.php?user=$1 [QSA,L]
-RewriteRule ^confirm/([0-9a-zA-Z-_]+) objection.php?user=$1 [L,QSA]
-RewriteCond %{SERVER_PORT} 80
